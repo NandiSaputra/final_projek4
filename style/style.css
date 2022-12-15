@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', serif;
+}
+
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/mist.jpg');
+  background-size: cover;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.left {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url('images/world.jpg');
+  background-size: cover;
+  border-top-left-radius: 2.2rem;
+  border-bottom-left-radius: 2.2rem;
+}
+
+.left h2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  width: 50%;
+}
+
+.right {
+  border-top-right-radius: 2.2rem;
+  border-bottom-right-radius: 2.2rem;
+}
+
+.tab-content {
+  border-bottom-right-radius: 2.2rem;
+}
+
+#btnSubmit {
+  width: 140px;
+  height: 45px;
+  background-color: rgb(0, 60, 255);
+  color: white;
+  font-weight: 500;
+  display: grid;
+  place-content: center;
+  transition: 0.2s;
+}
+
+#btnSubmit:hover {
+  background-color: rgb(0, 60, 255);
+  color: white;
+  filter: brightness(95%);
+}
+
+#btnSubmit:active {
+  background-color: rgb(0, 60, 255);
+  color: white;
+  filter: brightness(85%);
+}
+
+#loader {
+  pointer-events: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  animation: an1 1s ease infinite;
+}
+
+@keyframes an1 {
+  0% {
+      transform: rotate(0turn);
+  }
+
+  100% {
+      transform: rotate(1turn);
+  }
+}
+
+.nav-link {
+  color: rgba(0, 0, 0, 0.600) !important;
+  font-weight: 400;
+  padding: 10px 17px;
+}
+
+.nav-link.active {
+  color: #234CAD !important;
+  font-weight: 700;
+}
+
+.nav-link.active:hover {
+  color: #234CAD !important;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #234CAD !important;
+  font-weight: 500;
+}
+
+#city {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+#dates {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+#temp-day, #temp-hours {
+  font-weight: 500;
+  font-size: 64px;
+  margin-top: -30px;
+  height: 30px;
+}
+
+.condition {
+  margin-left: -30px;
+}
+
+.condition img {
+  margin-top: -30px;
+  width: 140px;
+  height: 140px;
+}
+
+#conditions-day, #conditions-hours {
+  margin-top: -5px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.hours-data h5 {
+  font-size: 19px;
+}
+
+@media (max-width: 576px) {
+  .hours-data .col-md-3 {
+      width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .condition {
+      margin-left: 0px;
+  }
+
+  .hours-data .hum-sec {
+      border-right: none !important;
+  }
+
+  .sunTime .col-lg-3 {
+      width: 150px;
+  }
+}
+
+@media (max-width: 991px) {
+  .left {
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 13rem !important;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      border-bottom-left-radius: 0;
+      background-size: 100%;
+      transition: background-size 1s ease-in-out;
+  }
+  
+  .left:hover {
+      background-size: 120%;
+  }
+
+  .left h2 {
+      font-size: 23px;
+  }
+
+  .right {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+  }
+
+  .tab-content {
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+  }
+
+  .day-temp-con .ps-5, .pe-5 {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+  }
+
+  .hours-temp-con .ps-5, .pe-5 {
+      padding-left: 0px !important;
+      padding-right: 0px !important;
+  }
+}
