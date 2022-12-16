@@ -2,6 +2,7 @@ var btnSubmit = document.getElementById('btnSubmit');
 var getCity = document.getElementById('inputCity');
 
 
+
 btnSubmit.addEventListener('click', function(e) {
     e.preventDefault();
     var setCity = getCity.value;
@@ -22,6 +23,19 @@ btnSubmit.addEventListener('click', function(e) {
                 .then(response => response.json())
                 .then((response) => {
                     document.getElementById('city').innerHTML = response.name+', '+response.sys.country;
+                     var dates = new Date(response.dt *1000);
+                    // // var times = new Date()
+
+                    // // var jam = times.getHours()
+                    var hari = dates.getDay()
+                    var bulan = dates.getMonth()
+                    var tahun = dates.getFullYear()
+                    var tanggal = dates.getDate()
+                    
+                    var hariarray = new Array("Sunday,","Monday,","Tuesday,","Wednesday,","Thursday,","Friday,","Saturday,")
+                    var bulanarray = new Array("Jan","Feb","Mar","Apr","May","June","July","Aug","Sept","Oct","Nov","Dec")
+                     document.getElementById('dates').innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun
+                     document.getElementById('dates1').innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun
         
                     document.getElementById('detailCity').innerHTML = response.name;
                     document.getElementById('temp-day').innerHTML = response.main.temp+ "°C";
@@ -30,8 +44,9 @@ btnSubmit.addEventListener('click', function(e) {
                     document.getElementById('descrip-day').innerHTML = response.weather[0].description;
                     iconCloud = response.weather[0].icon;
                     document.getElementById('imgCondition-day').setAttribute("src",`http://openweathermap.org/img/wn/${iconCloud}.png`)
-                    document.getElementById('sunrise').innerHTML = window.moment(response.sys.sunrise *1000).format('HH:mm a') ;
-                    document.getElementById('sunset').innerHTML = window.moment(response.sys.sunset *1000).format('HH:mm a');
+                    document.getElementById('sunrise').innerHTML = window.moment(response.sys.sunrise *1000).format('HH:mm ') + "WIB" ;
+                    document.getElementById('sunset').innerHTML = window.moment(response.sys.sunset *1000).format('HH:mm ') + "WIB"; 
+                    // document.getElementById('dates').innerHTML =window.moment(response.dt *1000).format('MMMM Do YYYY, h:mm:ss a');
                     document.getElementById('windSpeed').innerHTML = response.wind.speed + " kph";
                     document.getElementById('humidity').innerHTML = response.main.humidity + " %";
                     document.getElementById('pressure').innerHTML = response.main.pressure  + " mb";
