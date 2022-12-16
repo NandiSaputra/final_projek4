@@ -25,6 +25,8 @@ body {
   background-size: cover;
   border-top-left-radius: 2.2rem;
   border-bottom-left-radius: 2.2rem;
+  padding-bottom: 25px;
+  
 }
 
 .left h2 {
@@ -89,7 +91,7 @@ body {
 #content-day {
   margin-left: 5px;
   margin-right: 5px;
-  background-color: whitesmoke;
+  background-color: #e4caca;;
   border-radius: 50px;
 }
 
@@ -233,4 +235,14 @@ body {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+}
+#map {
+
+  height: 70vh;
+  border-radius: 15px;
+  
+}
+
+.leaflet-popup-content-wrapper {
+  width: 100%;
 }
