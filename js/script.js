@@ -36,6 +36,7 @@ btnSubmit.addEventListener('click', function(e) {
                     document.getElementById('humidity').innerHTML = response.main.humidity + " %";
                     document.getElementById('pressure').innerHTML = response.main.pressure  + " mb";
 
+                   
                     
                     this.innerHTML = "Search"
                     document.body.style.cursor = "default";
@@ -60,13 +61,16 @@ btnSubmit.addEventListener('click', function(e) {
                         getCity.value = null;
 
                         document.getElementById('city').innerHTML = "<span id='city' class='text-muted' style='font-size: 20px'>Please input a valid location!</span>"
-                        // document.getElementById('dates').innerHTML = "-"
+                        document.getElementById('dates').innerHTML = "-"
 
                         var contentDay = document.getElementById('content-day');
+                      
                         var notFoundDay = document.getElementById('not-found-day');
                         
                         contentDay.classList.add("d-none")
-                        notFoundDay.classList.remove("d-none")  
+                
+                        notFoundDay.classList.remove("d-none")
+                      
                     }
                 });
         },1000);

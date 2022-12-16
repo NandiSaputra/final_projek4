@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Slab', serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', serif;
 }
 
 body {
@@ -14,10 +14,10 @@ body {
 
 .material-symbols-outlined {
   font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
 }
 
 .left {
@@ -39,7 +39,8 @@ body {
   border-bottom-right-radius: 2.2rem;
 
 }
-.container.content{
+
+.container.content {
   width: fit-content;
 }
 
@@ -79,23 +80,26 @@ body {
   border-top-color: #fff;
   animation: an1 1s ease infinite;
 }
-.tab-content{
-  background-color: #f3e5e5;;
+
+.tab-content {
+  background-color: #f3e5e5;
+  ;
 }
-#content-day{
-margin-left: 5px;
-margin-right: 5px;
+
+#content-day {
+  margin-left: 5px;
+  margin-right: 5px;
   background-color: whitesmoke;
-  border-radius:  50px;
+  border-radius: 50px;
 }
 
 @keyframes an1 {
   0% {
-      transform: rotate(0turn);
+    transform: rotate(0turn);
   }
 
   100% {
-      transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
 
@@ -130,12 +134,13 @@ margin-right: 5px;
   font-weight: 400;
 }
 
-#temp-day{
+#temp-day {
   font-weight: 500;
   font-size: 64px;
   margin-top: -30px;
   height: 30px;
 }
+
 #temp-day1 {
   font-weight: 500;
   font-size: 30px;
@@ -164,60 +169,62 @@ margin-right: 5px;
 
 @media (max-width: 576px) {
   .hours-data .col-md-3 {
-      width: 50%;
+    width: 50%;
   }
 }
 
 @media (max-width: 768px) {
   .condition {
-      margin-left: 0px;
+    margin-left: 0px;
   }
 
 
 
   .sunTime .col-lg-3 {
-      width: 150px;
+    width: 150px;
   }
 }
 
 @media (max-width: 991px) {
   .left {
-      background-position: center;
-      background-repeat: no-repeat;
-      height: 13rem !important;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-      border-bottom-left-radius: 0;
-      background-size: 100%;
-      transition: background-size 1s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 13rem !important;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 0;
+    background-size: 100%;
+    transition: background-size 1s ease-in-out;
   }
-  
+
   .left:hover {
-      background-size: 120%;
+    background-size: 120%;
   }
 
   .left h2 {
-      font-size: 23px;
+    font-size: 23px;
   }
 
   .right {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 
   .tab-content {
-      border-bottom-right-radius: 20px;
-      border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 
-  .day-temp-con .ps-5, .pe-5 {
-      padding-left: 0px !important;
-      padding-right: 0px !important;
+  .day-temp-con .ps-5,
+  .pe-5 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 
-  .hours-temp-con .ps-5, .pe-5 {
-      padding-left: 0px !important;
-      padding-right: 0px !important;
+  .hours-temp-con .ps-5,
+  .pe-5 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }
