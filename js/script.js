@@ -1,4 +1,4 @@
-function wheater(){
+function MyWeather(){
     var getCity = document.getElementById('inputCity');
     var setCity = getCity.value;
 
