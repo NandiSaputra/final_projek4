@@ -1,10 +1,5 @@
-var btnSubmit = document.getElementById('btnSubmit');
-var getCity = document.getElementById('inputCity');
-
-
-
-btnSubmit.addEventListener('click', function(e) {
-    e.preventDefault();
+function wheater(){
+    var getCity = document.getElementById('inputCity');
     var setCity = getCity.value;
 
     if (setCity === "" ) {
@@ -23,10 +18,7 @@ btnSubmit.addEventListener('click', function(e) {
                 .then(response => response.json())
                 .then((response) => {
                     document.getElementById('city').innerHTML = response.name+', '+response.sys.country;
-                     var dates = new Date(response.dt *1000);
-                    // // var times = new Date()
-
-                    // // var jam = times.getHours()
+                    var dates = new Date(response.dt *1000);
                     var hari = dates.getDay()
                     var bulan = dates.getMonth()
                     var tahun = dates.getFullYear()
@@ -90,4 +82,4 @@ btnSubmit.addEventListener('click', function(e) {
                 });
         },1000);
     }
-})
+}
