@@ -137,7 +137,6 @@ function wheater(){
                     document.getElementById('imgCondition-day').setAttribute("src",`http://openweathermap.org/img/wn/${iconCloud}.png`)
                     document.getElementById('sunrise').innerHTML = window.moment(response.sys.sunrise *1000).format('HH:mm ') + "WIB" ;
                     document.getElementById('sunset').innerHTML = window.moment(response.sys.sunset *1000).format('HH:mm ') + "WIB"; 
-                    // document.getElementById('dates').innerHTML =window.moment(response.dt *1000).format('MMMM Do YYYY, h:mm:ss a');
                     document.getElementById('windSpeed').innerHTML = response.wind.speed + " kph";
                     document.getElementById('humidity').innerHTML = response.main.humidity + " %";
                     document.getElementById('pressure').innerHTML = response.main.pressure  + " mb";
