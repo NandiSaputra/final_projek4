@@ -65,6 +65,7 @@ fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&ap
                      document.getElementById('dates1').innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun
         
                     document.getElementById('detailCity').innerHTML = response.name;
+                    document.getElementById('detailCity1').innerHTML = response.name;
                     document.getElementById('temp-day').innerHTML = response.main.temp+ "°C";
                     document.getElementById('temp-day1').innerHTML = response.main.temp+ "°C";
                     document.getElementById('conditions-day').innerHTML = response.weather[0].main;
